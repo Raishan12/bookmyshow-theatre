@@ -27,15 +27,24 @@ app.post("/addmovie", async (req, res) => {
 
     try {
         const { name, screen, language, duration, certificate, category, releaseDate, poster, banner } = req.body
-        console.log("in try", name, screen, language, duration, certificate, category, releaseDate);
+        console.log("in try", {name, screen, language, duration, certificate, category, releaseDate});
 
         if (!name || !screen || !language || !duration || !certificate || !category || !releaseDate || !poster || !banner) {
             return res.status(404).send({ error: "please fill all fields" })
         }
-        const data = await movieSchema.create({ name, screen, language, duration, category, category, releaseDate, poster, banner })
+        const data = await movieSchema.create({ name, screen, language, duration, certificate, category, releaseDate, poster, banner })
         res.status(201).send(data)
     } catch (error) {
         res.status(500).send({ error: error })
+    }
+})
+
+app.get("/loaddata", async (req,res)=>{
+    try {
+        const data = await movieSchema.find()
+        res.status(200).send(data)
+    } catch (error) {
+        res.status(500).send({error: err})
     }
 })
 

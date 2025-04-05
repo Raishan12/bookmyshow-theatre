@@ -12,32 +12,59 @@
         <label for="name">Name: </label>
         <input type="text" name="name" id="name">
         <br>
-        <label for="screen">Screen: </label>
-        <input type="text" name="screen" id="screen">
+        <label for="">Screen: </label>
+        <!-- <input type="text" name="screen" id="screen"> -->
+        <label for="2k">2K Digital</label> <input type="checkbox" name="2k" id="2k">
+        <label for="4k">4K Digital</label> <input type="checkbox" name="4k" id="4k">
+        <label for="imax">IMAX</label> <input type="checkbox" name="imax" id="imax">
         <br>
-        <label for="language">Language: </label>
-        <input type="text" name="language" id="language">
+        <label for="">Language: </label>
+        <!-- <input type="text" name="language" id="language"> -->
+        <input type="checkbox" name="malayalam" id="malayalam"><label for="malayalam">Malayalam</label> 
+        <input type="checkbox" name="english" id="english"><label for="english">English</label> 
+        <input type="checkbox" name="tamil" id="tamil"><label for="tamil">Tamil</label> 
+        <input type="checkbox" name="hindi" id="hindi"><label for="hindi">Hindi</label> 
+        <input type="checkbox" name="telugu" id="telugu"><label for="telugu">Telugu</label> 
+        <input type="checkbox" name="kannada" id="kannada"><label for="kannada">Kannada</label> 
         <br>
         <label for="duration">Duration: </label>
-        <input type="text" name="duration" id="duration">
+        <input type="time" name="duration" id="duration" min="01:00" max="03:59" required>
+        <!-- <select name="duration" id="duration">
+            
+         </select> -->
         <br>
-        <label for="category">Category: </label>
-        <input type="text" name="category" id="category">
+        <label for="">Category: </label>
+        <!-- <input type="text" name="category" id="category"> -->
+        <input type="checkbox" name="Action" id="Action" value="Action"><label for="Action">Action</label> 
+        <input type="checkbox" name="Comedy" id="Comedy" value="Comedy"><label for="Comedy">Comedy</label> 
+        <input type="checkbox" name="Thriller" id="Thriller" value="Thriller"><label for="Thriller">Thriller</label> 
+        <input type="checkbox" name="Crime" id="Crime" value="Crime"><label for="Crime">Crime</label> 
+        <input type="checkbox" name="Romantic" id="Romantic" value="Romantic"><label for="Romantic">Romantic</label> 
+        <input type="checkbox" name="Horror" id="Horror" value="Horror"><label for="Horror">Horror</label> 
+        <input type="checkbox" name="Animation" id="Animation" value="Animation"><label for="Animation">Animation</label> 
+        <input type="checkbox" name="Drama" id="Drama" value="Drama"><label for="Drama">Drama</label> 
+        <input type="checkbox" name="Sci-fi" id="Sci-fi" value="Sci-fi"><label for="Sci-fi">Sci-fi</label> 
         <br>
-        <label for="certificate">Certificate: </label>
-        <input type="text" name="certificate" id="certificate">
+        <label for="">Certificate: </label>
+        <!-- <input type="text" name="certificate" id="certificate"> -->
+         <select name="certificate" id="certificate">
+            <option value="" hidden>Select</option>
+            <option value="U">U</option>
+            <option value="U/A">U/A</option>
+            <option value="A">A</option>
+         </select>
         <br>
         <label for="releaseDate">Release Date: </label>
         <input type="date" name="releaseDate" id="releaseDate">
         <div id="testdate"></div>
         <br>
         <label for="poster">Poster: </label>
-        <input type="file" name="poster" id="poster">
-        <div style="width: 200px; height: 200px;" id="posterpreview"></div>
+        <input type="file" name="poster" id="poster" accept="image/webp, image/png, image/jpg, image/jpeg">
+        <div id="posterpreview"></div>
         <br>
         <label for="banner">Banner: </label>
-        <input type="file" name="banner" id="banner">
-        <div style="width: 200px; height: 200px;" id="bannerpreview"></div>
+        <input type="file" name="banner" id="banner" accept="image/webp, image/png, image/jpg, image/jpeg">
+        <div id="bannerpreview"></div>
         <br>
         <input type="submit" value="Submit">
     </form>

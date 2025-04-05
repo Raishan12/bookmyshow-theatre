@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    margin: 0 15%;
+}
+
+.card {
+    /* border: 1px solid black; */
+    width: 230px;
+    /* height: 450px; */
+    border-radius: 15px;
+
+}
+
+.card img{
+    width: 230px;
+    height: 391px;
+    border-radius: 15px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 19px;
+}
