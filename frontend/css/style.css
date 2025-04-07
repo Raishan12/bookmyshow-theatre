@@ -3,11 +3,65 @@ body {
     padding: 0;
     background-color: whitesmoke;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 7%;
+}
+
+.ls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.ls img {
+    width: 120px;
+}
+
+.la {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -9px;
+    margin-bottom: 20px;
+    padding: 10px 7%;
+    background-color: rgb(214, 214, 214);
+}
+
+.lhs {
+    display: flex;
+    gap: 10px;
+}
+
+.rhs {
+    display: flex;
+    gap: 10px;
+}
+
+.addmovie {
+    background-color: #F84464;
+    padding: 3px 5px;
+    border-radius: 5px;
+    color: white;
+}
 
 .container {
     display: flex;
-    gap: 30px;
-    margin: 0 15%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 7%;
 }
 
 .card {

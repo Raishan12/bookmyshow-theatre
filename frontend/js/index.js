@@ -9,11 +9,11 @@ async function loadData(){
     let str=""
     data.forEach(movie=>{
         str += `
-        <div class="card">
+        <a href="/movie?id=${movie._id}"><div class="card">
             <img src="${movie.poster}" alt="${movie.name}">
             <p class="title">${movie.name}</p>
-            <p class="category">${movie.category}</p>
-        </div>
+            <p class="category">${movie.category.join(",  ")}</p>
+        </div></a>
         `
     })
     document.getElementById("container").innerHTML=str

@@ -34,7 +34,7 @@ function convertBase64(file){
 }
 
 
-// add movie
+
 document.getElementById("movieForm").addEventListener("submit",async(e)=>{
     e.preventDefault()
     let screen=[]
@@ -119,8 +119,8 @@ document.getElementById("movieForm").addEventListener("submit",async(e)=>{
         const data = await res.json()
         if(res.status===201){
             // #want to redirect to index.html
-            // window.location.href="http://localhost:5000/"    
-            alert("success")  
+            window.location.href="http://localhost:5000/"    
+            // alert("success")  
         }else{
             console.log(data);
             
