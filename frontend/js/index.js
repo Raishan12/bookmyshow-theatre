@@ -2,7 +2,7 @@ console.log("script page for load data")
 // loaddata works here
 
 async function loadData(){
-    const res = await fetch("http://localhost:5000/loaddata")
+    const res = await fetch("http://localhost:5000/api/movie/loaddata")
     const data = await res.json()
     console.log(data);
 

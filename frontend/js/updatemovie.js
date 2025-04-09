@@ -6,7 +6,7 @@ var newposter = ""
 var newbanner = ""
 
 async function movieData() {
-    const res = await fetch(`http://localhost:5000/moviedata/${id}`)
+    const res = await fetch(`http://localhost:5000/api/movie/moviedata/${id}`)
     const data = await res.json()
 
     if (res.status === 200) {
@@ -161,7 +161,7 @@ document.getElementById("movieForm").addEventListener("submit", async(e)=>{
         banner=newbanner
 
     try {
-        const res = await fetch(`http://localhost:5000/updatemovie/${id}`, {
+        const res = await fetch(`http://localhost:5000/api/movie/updatemovie/${id}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

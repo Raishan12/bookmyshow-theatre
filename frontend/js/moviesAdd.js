@@ -7,7 +7,7 @@ let poster=""
 document.getElementById("poster").addEventListener("change",async(e)=>{
     console.log(e.target.files)
     poster = await convertBase64(e.target.files[0])
-    document.getElementById("posterpreview").innerHTML=`<img width="100%" src="${poster}" alt="image preview">`
+    document.getElementById("posterpreview").innerHTML=`<img height="100%" src="${poster}" alt="image preview">`
 })
 
 let banner=""
@@ -111,7 +111,7 @@ document.getElementById("movieForm").addEventListener("submit",async(e)=>{
     
 
     try {
-        const res = await fetch("http://localhost:5000/addmovie",{
+        const res = await fetch("http://localhost:5000/api/movie/addmovie",{
             headers:{"Content-Type":"application/json"},
             method:"POST",
             body:JSON.stringify({name,screen,language,duration,certificate,category,releaseDate,poster,banner})
@@ -124,7 +124,7 @@ document.getElementById("movieForm").addEventListener("submit",async(e)=>{
         }else{
             console.log(data);
             
-            alert(data.error)
+            alert(data)
         }
 
     } catch (error) {

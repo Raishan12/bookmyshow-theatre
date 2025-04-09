@@ -1,71 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Tickets, Plays, Sports, Events & Cinemas near Kochi - BookMyShow</title>
+    <link rel="stylesheet" href="/css/addstyle.css">
     <script src="/js/moviesAdd.js" defer></script>
 </head>
+
 <body>
+    <div class="header" id="header">
+        <div class="ls">
+            <div class="logo"><img src="/images/BMS_logo_new.png" alt="Book My Show"></div>
+            <div class="search"><input type="search" name="search" id="search"></div>
+        </div>
+        <div class="la">
+            <div class="loc">Kochi ▼</div>
+            <a href="/">
+                <div class="addmovie">Movies</div>
+            </a>
+        </div>
+    </div>
+    <hr>
+    <div class="navbar">
+        <div class="lhs">
+            <div class="nav">Moveis</div>
+            <div class="nav">Stream</div>
+            <div class="nav">Events</div>
+            <div class="nav">Plays</div>
+            <div class="nav">Sports</div>
+            <div class="nav">Activities</div>
+        </div>
+        <div class="rhs">
+            <div class="nav">ListYourShow</div>
+            <div class="nav">Corporates</div>
+            <div class="nav">Offers</div>
+            <div class="nav">Gift Cards</div>
+        </div>
+    </div>
     <form id="movieForm">
+        <h1>Add Movie</h1>
         <label for="name">Name: </label>
         <input type="text" name="name" id="name">
         <br>
         <label for="">Screen: </label>
         <!-- <input type="text" name="screen" id="screen"> -->
-        <label for="2k">2K Digital</label> <input type="checkbox" name="2k" id="2k">
-        <label for="4k">4K Digital</label> <input type="checkbox" name="4k" id="4k">
-        <label for="imax">IMAX</label> <input type="checkbox" name="imax" id="imax">
-        <br>
+        <input type="checkbox" name="2k" id="2k"><label for="2k" class="lab">2K Digital</label>
+        <input type="checkbox" name="4k" id="4k"><label for="4k" class="lab">4K Digital</label>
+        <input type="checkbox" name="imax" id="imax"><label for="imax" class="lab">IMAX</label>
+        <br><br>
         <label for="">Language: </label>
         <!-- <input type="text" name="language" id="language"> -->
-        <input type="checkbox" name="malayalam" id="malayalam"><label for="malayalam">Malayalam</label> 
-        <input type="checkbox" name="english" id="english"><label for="english">English</label> 
-        <input type="checkbox" name="tamil" id="tamil"><label for="tamil">Tamil</label> 
-        <input type="checkbox" name="hindi" id="hindi"><label for="hindi">Hindi</label> 
-        <input type="checkbox" name="telugu" id="telugu"><label for="telugu">Telugu</label> 
-        <input type="checkbox" name="kannada" id="kannada"><label for="kannada">Kannada</label> 
-        <br>
+        <input type="checkbox" name="malayalam" id="malayalam"><label for="malayalam" class="lab">Malayalam</label>
+        <input type="checkbox" name="english" id="english"><label for="english" class="lab">English</label>
+        <input type="checkbox" name="tamil" id="tamil"><label for="tamil" class="lab">Tamil</label>
+        <input type="checkbox" name="hindi" id="hindi"><label for="hindi" class="lab">Hindi</label>
+        <input type="checkbox" name="telugu" id="telugu"><label for="telugu" class="lab">Telugu</label>
+        <input type="checkbox" name="kannada" id="kannada"><label for="kannada" class="lab">Kannada</label>
+        <br><br>
         <label for="duration">Duration: </label>
-        <input type="time" name="duration" id="duration" min="01:00" max="03:59" required>
+        <input type="time" name="duration" id="duration" min="01:00" max="03:59">
         <!-- <select name="duration" id="duration">
             
          </select> -->
-        <br>
+        <br><br>
         <label for="">Category: </label>
         <!-- <input type="text" name="category" id="category"> -->
-        <input type="checkbox" name="Action" id="Action" value="Action"><label for="Action">Action</label> 
-        <input type="checkbox" name="Comedy" id="Comedy" value="Comedy"><label for="Comedy">Comedy</label> 
-        <input type="checkbox" name="Thriller" id="Thriller" value="Thriller"><label for="Thriller">Thriller</label> 
-        <input type="checkbox" name="Crime" id="Crime" value="Crime"><label for="Crime">Crime</label> 
-        <input type="checkbox" name="Romantic" id="Romantic" value="Romantic"><label for="Romantic">Romantic</label> 
-        <input type="checkbox" name="Horror" id="Horror" value="Horror"><label for="Horror">Horror</label> 
-        <input type="checkbox" name="Animation" id="Animation" value="Animation"><label for="Animation">Animation</label> 
-        <input type="checkbox" name="Drama" id="Drama" value="Drama"><label for="Drama">Drama</label> 
-        <input type="checkbox" name="Sci-fi" id="Sci-fi" value="Sci-fi"><label for="Sci-fi">Sci-fi</label> 
-        <br>
+        <input type="checkbox" name="Action" id="Action" value="Action"><label for="Action" class="lab">Action</label>
+        <input type="checkbox" name="Comedy" id="Comedy" value="Comedy"><label for="Comedy" class="lab">Comedy</label>
+        <input type="checkbox" name="Thriller" id="Thriller" value="Thriller"><label for="Thriller"
+            class="lab">Thriller</label>
+        <input type="checkbox" name="Crime" id="Crime" value="Crime"><label for="Crime" class="lab">Crime</label>
+        <input type="checkbox" name="Romantic" id="Romantic" value="Romantic"><label for="Romantic"
+            class="lab">Romantic</label>
+        <input type="checkbox" name="Horror" id="Horror" value="Horror"><label for="Horror" class="lab">Horror</label>
+        <input type="checkbox" name="Animation" id="Animation" value="Animation"><label for="Animation"
+            class="lab">Animation</label>
+        <input type="checkbox" name="Drama" id="Drama" value="Drama"><label for="Drama" class="lab">Drama</label>
+        <input type="checkbox" name="Sci-fi" id="Sci-fi" value="Sci-fi"><label for="Sci-fi" class="lab">Sci-fi</label>
+        <br><br>
         <label for="">Certificate: </label>
         <!-- <input type="text" name="certificate" id="certificate"> -->
-         <select name="certificate" id="certificate">
+        <select name="certificate" id="certificate">
             <option value="" hidden>Select</option>
             <option value="U">U</option>
             <option value="U/A">U/A</option>
             <option value="A">A</option>
-         </select>
+        </select>
         <br>
         <label for="releaseDate">Release Date: </label>
         <input type="date" name="releaseDate" id="releaseDate">
         <div id="testdate"></div>
         <br>
-        <label for="poster">Poster: </label>
-        <input type="file" name="poster" id="poster" accept="image/webp, image/png, image/jpg, image/jpeg">
-        <div id="posterpreview" class="preview" style="height: 200px; width: 200px;"></div>
-        <br>
-        <label for="banner">Banner: </label>
-        <input type="file" name="banner" id="banner" accept="image/webp, image/png, image/jpg, image/jpeg">
-        <div id="bannerpreview" class="preview" style="height: 200px; width: 200px;"></div>
-        <br>
+        <div class="imagesdiv">
+            <div>
+                <label for="poster">Poster: </label>
+                <input type="file" name="poster" id="poster" accept="image/webp, image/png, image/jpg, image/jpeg">
+                <div id="posterpreview" class="preview" style="height: 200px; width: 200px;"></div>
+            </div>
+            <div>
+                <label for="banner">Banner: </label>
+                <input type="file" name="banner" id="banner" accept="image/webp, image/png, image/jpg, image/jpeg">
+                <div id="bannerpreview" class="preview" style="height: 200px; width: 200px;"></div>
+            </div>
+            <br>
+        </div>
         <input type="submit" value="Submit">
     </form>
 </body>
+
 </html>

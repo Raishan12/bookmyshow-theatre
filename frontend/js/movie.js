@@ -3,7 +3,7 @@ let id = params.get("id")
 console.log(id);
 
 async function moviedata(){
-    const res = await fetch(`http://localhost:5000/moviedata/${id}`)
+    const res = await fetch(`http://localhost:5000/api/movie/moviedata/${id}`)
     console.log(res);
     const data = await res.json()
     console.log(data)
@@ -36,7 +36,7 @@ async function movieDelete() {
     console.log("delete function");
     console.log(id);
     try {
-        const res = await fetch(`http://localhost:5000/delete/${id}`)
+        const res = await fetch(`http://localhost:5000/api/movie/delete/${id}`)
         const data = res.json()
         if(res.status==200){
             window.location.href="http://localhost:5000/"  
