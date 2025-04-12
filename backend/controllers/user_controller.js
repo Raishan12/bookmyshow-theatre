@@ -29,7 +29,6 @@ export const loaduser = async (req, res) => {
         if(!data){
             return res.status(404).send("User Not Found")
         }
-        
         res.status(200).send(data)
         
     } catch (error) {
