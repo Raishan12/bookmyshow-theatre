@@ -4,6 +4,8 @@ import path from "path"
 import url from "url"
 import movieRoutes from "./routes/movie_route.js"
 import userRoutes from "./routes/user_route.js"
+import env from "dotenv"
+env.config()
 
 const port = 5000
 const app = express()

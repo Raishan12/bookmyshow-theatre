@@ -3,23 +3,25 @@ console.log("this is signin");
 async function signin(event){
     event.preventDefault()
 
-    const username = document.getElementById("username").value
+    const email = document.getElementById("email").value
     const password = document.getElementById("password").value    
 
     try {
         const res = await fetch("http://localhost:5000/api/sign/loaduser",{
             method: "post",
             headers: {"Content-Type":"application/json"},
-            body: JSON.stringify({ username, password })
+            body: JSON.stringify({ email, password })
         })
         console.log(res);
         const data = await res.json()
         console.log(data);
 
         if(res.status===200){
-            alert("Login Success")
+            localStorage.setItem("token",data.token)
+            alert(data.message)
+            window.location.href = "/"
         }else{
-            alert("failed")
+            alert(data.message)
         }
 
     } catch (error) {
